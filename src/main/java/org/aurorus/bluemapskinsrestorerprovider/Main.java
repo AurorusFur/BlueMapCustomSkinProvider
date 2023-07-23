@@ -8,7 +8,6 @@ import de.bluecolored.bluemap.api.plugin.SkinProvider;
 import net.skinsrestorer.api.SkinsRestorerAPI;
 import net.skinsrestorer.api.property.IProperty;
 import org.bukkit.plugin.java.JavaPlugin;
-import com.technicjelle.UpdateChecker;
 import java.awt.image.BufferedImage;
 import java.util.Base64;
 import java.util.Optional;
@@ -16,8 +15,6 @@ import java.util.UUID;
 import java.util.function.Consumer;
 
 public final class Main extends JavaPlugin {
-	UpdateChecker updateChecker;
-
 	private SkinsRestorerAPI skinsRestorerAPI;
 
 	public SkinsRestorerAPI getSkinsRestorerAPI() {

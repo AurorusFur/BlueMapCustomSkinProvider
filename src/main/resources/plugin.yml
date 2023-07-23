@@ -1,8 +1,7 @@
 name: BlueMapSkinsRestorerProvider
 version: ${project.version}
-main: org.aurorus.bluemapskinsrestorerprovider
+main: org.aurorus.bluemapskinsrestorerprovider.Main
 api-version: 1.13
-load: POSTWORLD
 depend:
   - BlueMap
   - SkinsRestorer
