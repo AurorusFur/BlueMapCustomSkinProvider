@@ -33,10 +33,23 @@ public final class Main extends JavaPlugin {
 		SkinProvider customSkinProvider = playerUUID -> {
 			Player player = (Player) getServer().getOfflinePlayer(playerUUID);
 			String playerName = player.getName();
-			String url = skinsRestorerAPI.getSkinTextureUrl(skinsRestorerAPI.getSkinData(skinsRestorerAPI.getSkinName(playerName)));
+			BufferedImage img;
+			String url = "";
+			try {
+				if (skinsRestorerAPI.getSkinName(playerName) != null) {
+					url = skinsRestorerAPI.getSkinTextureUrl(skinsRestorerAPI.getSkinData(skinsRestorerAPI.getSkinName(playerName)));
+				}
+				else {
+					url = skinsRestorerAPI.getSkinTextureUrl(skinsRestorerAPI.getSkinData(playerName));
+				}
+			}
+			catch (NullPointerException e) {
+				img = null;
+				return Optional.ofNullable(img);
+			}
 
 			log.info("Downloading skin for " + playerName + " from " + url);
-			BufferedImage img = MCUtils.downloadImage(url);
+			img = MCUtils.downloadImage(url);
 			return Optional.ofNullable(img);
 		};
 
