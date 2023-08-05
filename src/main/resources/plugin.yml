@@ -5,6 +5,6 @@ api-version: 1.13
 depend:
   - BlueMap
   - SkinsRestorer
-authors: [ TechnicJelle, Aurorus ]
+authors: [ Aurorus ]
 description: ${project.description}
 website: ${project.url}

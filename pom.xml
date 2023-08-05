@@ -4,19 +4,19 @@
 		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.technicjelle</groupId>
-	<artifactId>BlueMapCustomSkinProvider</artifactId>
-	<version>1.2</version>
+	<groupId>org.aurorus.bluemapskinsrestorerprovider</groupId>
+	<artifactId>BlueMapSkinsRestorerProvider</artifactId>
+	<version>1.0</version>
 	<packaging>jar</packaging>
 
-	<name>BlueMapCustomSkinProvider</name>
+	<name>BlueMapSkinsRestorerProvider</name>
 
-	<description>A paper plugin to use a custom skin server for BlueMap</description>
+	<description>A paper plugin to use a SkinsRestorer for BlueMap</description>
 	<properties>
 		<java.version>11</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
-	<url>https://github.com/TechnicJelle/BlueMapCustomSkinProvider</url>
+	<url>https://github.com/AurorusFur/BlueMapSkinsRestorerProvider</url>
 
 	<build>
 		<plugins>
@@ -118,10 +118,12 @@
 			<version>3.0.2</version>
 			<scope>compile</scope>
 		</dependency>
+		<!-- SkinsRestorer API -->
 		<dependency>
 			<groupId>net.skinsrestorer</groupId>
 			<artifactId>skinsrestorer-api</artifactId>
 			<version>14.2.12</version>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 </project>
